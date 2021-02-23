@@ -10,3 +10,5 @@ To get started:
   - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
 
 Then follow the on-screen instructions to set up your repo.
+
+This project will include my personal portfolio, which will be created during the first few weeks of Google SPS.
