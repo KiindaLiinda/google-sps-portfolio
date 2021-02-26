@@ -7,3 +7,8 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+.banner{
+    width: 75%;
+    padding: 30px
+}
