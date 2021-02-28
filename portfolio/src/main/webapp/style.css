@@ -61,6 +61,15 @@ html{
     color: #c9fff5;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 16.66%;
+  padding: 5px;
+}
+
 .socialicons{
     text-align: center;
 }
