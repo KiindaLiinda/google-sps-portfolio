@@ -36,3 +36,13 @@ html{
 .subtitle{
     color: #c9fff5;
 }
+
+.socialicons{
+    text-align: center;
+}
+
+#socials{
+    font-size: 50px;
+    color: #00ff26;
+    padding-left: 20px;
+}
