@@ -26,3 +26,13 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+//The following code is from Week 2 -------------------------
+
+async function myServlet() {
+  const responseFromServer = await fetch('/myservlet');
+  const textFromResponse = await responseFromServer.text();
+
+  const myServletMessage = document.getElementById('my-servlet');
+  myServletMessage.innerText = textFromResponse;
+}
