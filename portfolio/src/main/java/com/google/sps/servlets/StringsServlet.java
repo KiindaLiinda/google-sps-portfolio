@@ -7,16 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/strings")
-public final class StringsServlet extends HttpServlet {
+@WebServlet("/myservlet")
+public class MyServlet extends HttpServlet {
 
-  public String[] StringArray = {"My favorite color is turquoise", "My favorite fruit is watermelon", "My favorite band is Slipknot"};
+  ArrayList<String> favorites = new ArrayList<String>();
+    favorites.add("Turqioise");
+    favorites.add("Watermelon");
+    favorites.add("Slipknot");
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-    response.setContentType("text/html;");
-    response.getWriter().println("Hello! Welcome to my page!");
+    
+    Gson gson = new Gson();
+    String convertedList = gson.toJson(favorites);
+    
   }
-
 }
