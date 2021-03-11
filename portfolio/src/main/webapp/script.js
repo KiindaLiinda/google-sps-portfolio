@@ -36,3 +36,33 @@ async function myServlet() {
   const myServletMessage = document.getElementById('my-servlet');
   myServletMessage.innerText = textFromResponse;
 }
+
+//The following code is from Week 3
+google.charts.load('current', {
+  'packages':['geochart'],
+  // Note: you will need to get a mapsApiKey for your project.
+  // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+  'mapsApiKey': 'AIzaSyAnS-PCXsJQBbt2IESQu_0ne7uKBb-DxX0'
+  });
+  google.charts.setOnLoadCallback(drawMarkersMap);
+
+  function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['City',   'Information'],
+        ['Los Angeles',  'This Is The City I Am From'],
+        ['Merced',  'This Is The City I Attend College'],
+        ['Jerez',  'This Is The City My Father Is From'],
+        ['Tlazazalca',  'This Is The City My Mother Is From']
+      ]);
+      
+
+      var options = {
+        region: 'IT',
+        displayMode: 'markers',
+        colorAxis: {colors: ['red', 'blue']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+  }

@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+/*package com.google.sps.servlets;
 
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -22,4 +22,4 @@ public class MyServlet extends HttpServlet {
     String convertedList = gson.toJson(favorites);
     
   }
-}
+} */
