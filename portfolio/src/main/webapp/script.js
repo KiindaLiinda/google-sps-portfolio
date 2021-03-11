@@ -49,15 +49,15 @@ google.charts.load('current', {
   function drawMarkersMap() {
       var data = google.visualization.arrayToDataTable([
         ['City',   'Information'],
-        ['Los Angeles',  'This Is The City I Am From'],
-        ['Merced',  'This Is The City I Attend College'],
-        ['Jerez',  'This Is The City My Father Is From'],
-        ['Tlazazalca',  'This Is The City My Mother Is From']
+        ['Los Angeles',  'This Is The City I Am From (Los Angeles, CA)'],
+        ['Merced',  'This Is The City I Attend College (Merced, CA)'],
+        ['Jerez de García Salinas',  'This Is The City My Father Is From (Jerez, Zacatecas)'],
+        ['Tlazazalca',  'This Is The City My Mother Is From (Tlazazalca, Michoacán)']
       ]);
       
 
       var options = {
-        region: 'IT',
+        region: '019',
         displayMode: 'markers',
         colorAxis: {colors: ['red', 'blue']}
       };
