@@ -66,3 +66,21 @@ google.charts.load('current', {
 
       chart.draw(data, options);
   }
+  
+//------------------------------------
+
+async function StringsServlet() {
+    const responseFromServer = await fetch('/strings')
+    const textFromResponse = await responseFromServer.text();
+
+    const strings = await responseFromServer.json();
+
+    console.log(strings.Watermelon);
+    console.log(strings.Slipknot);
+    console.log(strings.Turquoise);
+    console.log(strings.Ballista);
+
+    const myFavorites = document.getElementById('StringServlet');
+    stringsServletMessage.innerText = textFromResponse;
+}
+
