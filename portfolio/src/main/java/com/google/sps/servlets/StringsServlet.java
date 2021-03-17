@@ -10,17 +10,19 @@ import java.util.ArrayList;
 
 @WebServlet("/strings")
 public class StringsServlet extends HttpServlet {
-   public static void main(String[] args) {
-     ArrayList<String> favorites = new ArrayList<String>();
-     favorites.add("Watermelon");
-     favorites.add("Slipknot");
-     favorites.add("Turquoise");
-     favorites.add("Ballista");
-   }
 
   @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ArrayList<String> favorites = new ArrayList<String>();
+        favorites.add("Watermelon");
+        favorites.add("Slipknot");
+        favorites.add("Turquoise");
+        favorites.add("Ballista");
+
         Gson gson = new Gson();
-   
-  }
+        String json = gson.toJson(favorites);
+        
+        response.setContentType("application/json;");
+        response.getWriter().println(json);
+    }
 }
