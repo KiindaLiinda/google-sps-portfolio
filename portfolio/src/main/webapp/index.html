@@ -100,6 +100,9 @@
             <img src="/images/Manofmedan.png" style="width:100%">
           </div>
         </div>
+      <p>Click this button to generate something on my list of favorite things!</p>
+      <button onclick="StringsServlet();">Favorite Things</button>
+      <p id="strings-servlet"></p>
 
       <p>Click this button for a message</p>
       <button onclick="myServlet();">
@@ -119,6 +122,27 @@
 	      <a href="https://www.youtube.com/channel/UCu0AnLIeQ9KLOxp4oFbyAhQ" target="_blank"><i class="fa fa-youtube-play" id="socials"></i></a>
 	      <a href="https://www.twitch.tv/kiindaliinda" target="_blank"><i class="fa fa-twitch" id="socials"></i></a>
         </div>
+
+        <form action="/form" method="POST">
+            <p>Contact Me:</p>
+            <p>Name</p>
+            <textarea name="name-input"></textarea>
+            <br/>
+
+            <p>Email</p>
+            <textarea name="email-input"></textarea>
+            <br/>
+
+            <p>Subject</p>
+            <textarea name="subject-input"></textarea>
+            <br/>
+
+            <p>Content</p>
+            <textarea name="content-input"></textarea>
+            <br/>
+            <input type="submit"/>
+        </form>
+
       </div>
     </div>
   </body>
